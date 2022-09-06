@@ -238,3 +238,91 @@ body{
   opacity: 0;
   display: none;
 }
+
+.calculator span {
+  /*位置*/
+  position: relative;
+  width: var(--span-size);
+  height: var(--span-size);
+
+  /*布局*/
+  display: grid;
+  place-items: center;
+
+  /*修饰 - 整体*/
+  background: var(--dark-span-background-linear);
+  box-shadow: var(--dark-span-shadow);
+  /*修饰 - 边框*/
+  /*border: 1px solid #fff;*/
+  border-radius: 10px;
+  /*修饰 - 字体*/
+
+  /*修饰 - 特性*/
+  cursor: pointer;
+}
+
+.calculator span.mousedown {
+  transform: translateY(3px);
+  box-shadow: var(--span-mousedown-shadow);
+}
+
+.calculator span#clear {
+  grid-column: span 2;
+  width: 100%;
+  background: var(--clear-deep-color);
+}
+
+.calculator span#plus {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.calculator span#delete {
+  background: var(--delete-deep-color);
+}
+
+.calculator span#equal {
+  background: var(--equal-deep-color);
+}
+
+.calculator span::before {
+  /*位置*/
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  bottom: 10px;
+  right: 12px;
+  /*布局*/
+  display: grid;
+  place-items: center;
+  /*修饰 - 整体*/
+  background: var(--dark-span-before-background-linear);
+
+  /*修饰 - 字体*/
+  color: var(--light-primary-color);
+  font-size: 2rem;
+  text-transform: uppercase;
+  /*修饰 - 边框*/
+  border-top: var(--dark-span-before-border);
+  border-bottom: var(--dark-span-before-border);
+  border-left: var(--dark-span-before-border);
+  box-shadow: var(--dark-span-before-box-shadow);
+  border-radius: 10px;
+  /*修饰 - 特性*/
+  content: '';
+}
+
+.calculator span#clear::before {
+  border: none;
+  background: var(--clear-before-background-linear);
+}
+
+.calculator span#delete::before {
+  border: none;
+  background: var(--delete-before-background-linear);
+}
+
+.calculator span#equal::before {
+  border: none;
+  background: var(--equal-before-background-linear);
+}
