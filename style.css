@@ -197,3 +197,44 @@ body{
 .toggle img:nth-child(1):active {
   box-shadow: var(--dark-image-active-shadow);
 }
+
+#textarea {
+  /*位置*/
+  position: relative;
+  width: var(--text-area-width);
+  /*布局 - 本层*/
+  grid-column: span 4;
+  /*布局 -下层*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*修饰*/
+  border: none;
+  border-radius: 10px;
+  background: var(--screen-color);
+  box-shadow: var(--text-area-screen-shadow);
+}
+
+#textarea input {
+  /*位置*/
+  position: absolute;
+  width: 100%;
+  /*布局*/
+  /*修饰 整体*/
+  padding: 0 10px;
+  background: none;
+  border: none;
+  /*修饰 字体*/
+  font-family: 'Chakra';
+  font-size: 3rem;
+  line-height: 1rem;
+  text-align: right;
+  /*修饰 特性*/
+  outline: none;
+}
+
+#textarea input:nth-child(1) {
+  opacity: 0;
+  display: none;
+}
