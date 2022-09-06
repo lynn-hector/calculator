@@ -154,3 +154,46 @@ body{
   box-shadow: var(--dark-calculator-background-shadow);
   text-shadow: var(--dark-text-shadow);
 }
+
+.toggle {
+  /*位置*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*布局*/
+  display: grid;
+  place-items: center;
+  /*修饰*/
+}
+
+.toggle img{
+  /*位置*/
+  position: relative;
+  width: var(--image-size);
+  height: var(--image-size);
+  top: calc(var(--image-size)/2);
+  right: calc(var(--image-size)/2);
+  /*布局*/
+
+  /*修饰*/
+}
+
+.toggle img:nth-child(1) {
+  display: block;
+  filter: invert(1);
+
+  box-shadow: var(--light-image-shadow);
+}
+
+.toggle img:nth-child(1):active {
+  box-shadow: var(--light-image-active-shadow);
+}
+
+.toggle img:nth-child(2) {
+  display: none;
+  box-shadow: var(--dark-image-shadow);
+}
+
+.toggle img:nth-child(1):active {
+  box-shadow: var(--dark-image-active-shadow);
+}
